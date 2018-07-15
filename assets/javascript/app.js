@@ -1,17 +1,26 @@
 window.onload = function() {
   //declare global variables
 
-  var correctUserAnswers = 0;
-  var incorrectUserAnswers = 0;
-  var unanswered = 0;
-  var userAnswers=[];
-  var correctAnswers=["a","b","c","c","b","d","a","b"];
 
-  $(".start").on("click", function() {
-    //Displays questions
+
+
+
+  $(document).on("click",".start", function() {
+    var correctUserAnswers = 0;
+    var incorrectUserAnswers = 0;
+    var unanswered = 0;
+    var userAnswers = [];
+    var correctAnswers = ["a", "b", "c", "c", "b", "d", "a", "b"];
+    var timeLimit = 0;
+    var timer = 0;
+    pageTimer();
+
+
+    
+    //Displays the questions
     $(".questions").html(`
 <p id="timeRemaining"></p>
-<div class="form-group" name="questionForm">
+<div class="form-group text-center" name="questionForm">
 
 <div class="row">
 <div class="radio-group">
@@ -89,77 +98,76 @@ window.onload = function() {
 </div>
 `);
 
+    function captureAnswers() {
+      var answer1 = $("input[name=questionOne]:checked").val();
+      var answer2 = $("input[name=questionTwo]:checked").val();
+      var answer3 = $("input[name=questionThree]:checked").val();
+      var answer4 = $("input[name=questionFour]:checked").val();
+      var answer5 = $("input[name=questionFive]:checked").val();
+      var answer6 = $("input[name=questionSix]:checked").val();
+      var answer7 = $("input[name=questionSeven]:checked").val();
+      var answer8 = $("input[name=questionEight]:checked").val();
 
-
-function captureAnswers(){
-var answer1= $('input[name=questionOne]:checked').val();
-var answer2= $('input[name=questionTwo]:checked').val();
-var answer3= $('input[name=questionThree]:checked').val()
-var answer4= $('input[name=questionFour]:checked').val()
-var answer5= $('input[name=questionFive]:checked').val()
-var answer6= $('input[name=questionSix]:checked').val()
-var answer7= $('input[name=questionSeven]:checked').val()
-var answer8= $('input[name=questionEight]:checked').val()
-
-userAnswers=[answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8];
-console.log(userAnswers);
-}
-
-function checkAnswers(){
-  for ( i=0; i<8; i++){
-    if(userAnswers[i]===correctAnswers[i]){
-      correctUserAnswers++;
-      console.log(correctUserAnswers)
+      userAnswers = [
+        answer1,
+        answer2,
+        answer3,
+        answer4,
+        answer5,
+        answer6,
+        answer7,
+        answer8
+      ];
+      console.log(userAnswers);
     }
-    else if(typeof userAnswers[i]==='undefined'){
-      unanswered++;
-      incorrectUserAnswers++
-      console.log(unanswered);
+
+    function checkAnswers() {
+      for (i = 0; i < 8; i++) {
+        if (userAnswers[i] === correctAnswers[i]) {
+          correctUserAnswers++;
+          console.log(correctUserAnswers);
+        } else if (typeof userAnswers[i] === "undefined") {
+          unanswered++;
+          incorrectUserAnswers++;
+          console.log(unanswered);
+        } else {
+          incorrectUserAnswers++;
+          console.log(incorrectUserAnswers);
+        }
+      }
     }
-    else{
-      incorrectUserAnswers++;
-      console.log(incorrectUserAnswers);
-    }
-  }
-}
 
+    //   //Check what answer is selected and log the value
+    //   // var selectedButton;
 
+    //   // function checkSelected() {
+    // // $(".radio-group").each(function(){
+    // //  console.log("radio group")
 
+    //     console.log(this);
+    //       if ($("input:radio").is(':checked')) {
 
-  //   //Check what answer is selected and log the value
-  //   // var selectedButton;
+    //         selectedButton = this.value;
+    //         console.log(selectedButton);
+    //       }
+    //       else {
+    //             unanswered++;
+    //             console.log(unanswered);
 
-  //   // function checkSelected() {
-  // // $(".radio-group").each(function(){
-  // //  console.log("radio group")
+    //       }
 
-  //     console.log(this);
-  //       if ($("input:radio").is(':checked')) {
+    //     });
 
-  //         selectedButton = this.value;
-  //         console.log(selectedButton);
-  //       }
-  //       else {
-  //             unanswered++;
-  //             console.log(unanswered);
-
-           
-  //       }
-
-
-     
-  //     });
-      
     // }
 
-
-    
-    //Set 90 second timer
-    var timeLimit = 10;
-    var timer = setInterval(pageTimer, 1000);
-
+    timeLimit = 10;
+    timer = setInterval(pageTimer, 1000);
     //function to set timer
     function pageTimer() {
+      //Set 90 second timer
+      // timeLimit = 10;
+      // timer = setInterval(pageTimer, 1000);
+
       $("#timeRemaining").text("You have " + timeLimit + " seconds remaining");
       timeLimit--;
       //Clears the timer and displays time up message
@@ -167,7 +175,13 @@ function checkAnswers(){
         //checkSelected();
         captureAnswers();
         checkAnswers();
-        $(".questions").text("Time's up!"+ correctUserAnswers+ incorrectUserAnswers + unanswered );
+        $(".questions").html('<p>Time\'s up</p>');
+        $(".questions").append ('<p>Correct Answers '+ correctUserAnswers + '</p>\
+        <p>Incorrect answers ' + incorrectUserAnswers + '</p>\
+        <p>Unanswered questions ' + unanswered + '</p>\
+         <br><button type="button" class="btn btn-primary start">Start Game</button> '
+
+        );
         clearInterval(timer);
       }
     }

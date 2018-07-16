@@ -24,7 +24,7 @@ window.onload = function() {
 
 <div class="row">
  <div class="radio-group mx-auto">
-<h4> In what year did the first episode of the Simpsons premiere?</h4>
+<h4> 1. In what year did the first episode of the Simpsons premiere?</h4>
 <label class="radio"><input type="radio" value="a" name="questionOne"> a. 1988 </label>
 <label class="radio"><input  type="radio" value="b" name="questionOne"> b. 1989 </label>
 <label class="radio"><input type="radio" value ="c" name="questionOne"> c. 1990 </label>
@@ -34,7 +34,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4> What street do the Simpsons live on?</h4>
+<h4> 2. What street do the Simpsons live on?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionTwo"> a Everest Terrace </label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionTwo"> b. Evergreen Terrace </label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionTwo"> c. Main Street </label>
@@ -44,7 +44,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4>Which celebrity has never appeared on The Simpsons?</h4>
+<h4> 3. Which celebrity has never appeared on The Simpsons?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionThree"> a. Michael Jackson </label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionThree"> b. Paul McCartney</label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionThree"> c. Stephen Colbert </label>
@@ -54,7 +54,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4>How old is Bart Simpson?</h4>
+<h4> 4. How old is Bart Simpson?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionFour"> a. 8 </label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionFour"> b. 9 </label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionFour"> c. 10 </label>
@@ -64,7 +64,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4> What town do the Simpsons live in?</h4>
+<h4> 5. What town do the Simpsons live in?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionFive"> a. Springfield</label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionFive"> b. Shelbyville</label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionFive"> c. Springville 3</label>
@@ -74,7 +74,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4> What is the name of the Simpsons' current cat?</h4>
+<h4> 6. What is the name of the Simpsons' current cat?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionSix"> a. Snowball </label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionSix"> b. Snowball II the sequel</label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionSix"> c. Snowball IV </label>
@@ -84,7 +84,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4>  Who shot Mr. Burns?</h4>
+<h4> 7. Who shot Mr. Burns?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionSeven"> a. Kusty the Clown </label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionSeven"> b. Homer Simpson </label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionSeven"> c. Marge Simpson </label>
@@ -94,7 +94,7 @@ window.onload = function() {
 
 <div class="row">
 <div class="radio-group mx-auto">
-<h4> According to the song " We do" what group "makes Steve Guttenburg a star"?</h4>
+<h4> 8. According to the song " We do" what group "makes Steve Guttenburg a star"?</h4>
 <label class="radio-inline"><input type="radio" value="a" name="questionEight"> a. The Free Masons</label>
 <label class="radio-inline"><input  type="radio" value="b" name="questionEight"> b. The Shriners</label>
 <label class="radio-inline"><input type="radio" value ="c" name="questionEight"> c .The Stonecutters </label>

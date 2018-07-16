@@ -1,6 +1,18 @@
+body {overflow-x: hidden;
+    font-family: 'Architects Daughter', cursive;}
 .jumbotron{
-    background-image: url("../images/simpsons\ header.jpg");
-    color: white;
-    font-weight: bold;
+    background-image: url("../images/simpsons\ header\ faded.jpg");
+    margin-bottom: 0;
+}
+.display-4 h1{
     
+     font-weight: bold; 
+    font-size: 45px;
+}
+
+label{
+    font-size: 20px;
+}
+p{
+    font-size:20px;
 }
